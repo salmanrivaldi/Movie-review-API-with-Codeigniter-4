@@ -13,23 +13,14 @@
               </div>
               <div class="navbar-wrap main-menu d-none d-lg-flex">
                 <ul class="navigation">
-                  <li class="menu-item-has-children"><a href="/">Home</a></li>
-                  <li class="active menu-item-has-children"><a href="/movie">Movie</a></li>
-                  <li><a href="/tv-show">tv show</a></li>
+                  <li><a href="/">Home</a></li>
+                  <li class="<?= $title == 'Movies' ? 'active' : ''; ?>"><a href="/movie">Movie</a></li>
+                  <li class="<?= $title == 'Tv Show' ? 'active' : ''; ?>"><a href="/tv-show">tv show</a></li>
                 </ul>
               </div>
               <div class="header-action d-none d-md-block">
                 <ul>
                   <li class="header-search"><a href="#" data-toggle="modal" data-target="#search-modal"><i class="fas fa-search"></i></a></li>
-                  <li class="header-lang">
-                    <form action="#">
-                      <div class="icon"><i class="flaticon-globe"></i></div>
-                      <select id="lang-dropdown">
-                        <option value="">English</option>
-                        <option value="">Indonesia</option>
-                      </select>
-                    </form>
-                  </li>
                 </ul>
               </div>
             </nav>

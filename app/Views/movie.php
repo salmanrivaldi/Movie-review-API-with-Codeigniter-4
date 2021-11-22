@@ -14,7 +14,7 @@
             <h2 class="title">Our <span>Movie</span></h2>
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Movie</li>
               </ol>
             </nav>
@@ -31,7 +31,7 @@
       <div class="row align-items-end mb-60">
         <div class="col-lg-6">
           <div class="section-title text-center text-lg-left">
-            <span class="sub-title">ONLINE STREAMING</span>
+            <span class="sub-title">MOVIES</span>
             <h2 class="title">New Release Movies</h2>
           </div>
         </div>

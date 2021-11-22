@@ -11,11 +11,11 @@
       <div class="row">
         <div class="col-12">
           <div class="breadcrumb-content">
-            <h2 class="title">Our <span>Movie</span></h2>
+            <h2 class="title">Tv <span>Show</span></h2>
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Movie</li>
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">TV SHOW</li>
               </ol>
             </nav>
           </div>
@@ -31,8 +31,8 @@
       <div class="row align-items-end mb-60">
         <div class="col-lg-6">
           <div class="section-title text-center text-lg-left">
-            <span class="sub-title">ONLINE STREAMING</span>
-            <h2 class="title">New Release Movies</h2>
+            <span class="sub-title">TV SHOW</span>
+            <h2 class="title">New Tv Show</h2>
           </div>
         </div>
         <div class="col-lg-6">
@@ -49,8 +49,8 @@
       </div>
 
       <div class="row tr-movie-active">
-        <?php foreach ($movie_upcoming as $movie) : ?>
-          <div class="col-xl-3 col-lg-4 col-sm-6 grid-item grid-sizer <?php foreach ($movie->genre_ids as $genre) : ?><?= $movie_genre[$genre] . ''; ?> <?php endforeach; ?>">
+        <?php foreach ($tv_new as $movie) : ?>
+          <div class="col-xl-3 col-lg-4 col-sm-6 grid-item grid-sizer <?php foreach ($movie->genre_ids as $genre) : ?><?= $tv_genre[$genre] . ''; ?> <?php endforeach; ?>">
             <div class="movie-item movie-item-three mb-50">
               <div class="movie-poster">
                 <img src="http://image.tmdb.org/t/p/w500<?= $movie->poster_path; ?>" alt="">
@@ -62,14 +62,14 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                   </li>
-                  <li><a href="https://www.youtube.com/watch?v=<?= getTrailerSliderArea($movie->id); ?>" class="popup-video btn">Watch Trailer</a></li>
+                  <li><a href="https://www.youtube.com/watch?v=<?= getTvTrailer($movie->id); ?>" class="popup-video btn">Watch Trailer</a></li>
                   <li><a href="<?= base_url("movie-details/$movie->id"); ?>" class="btn">Details</a></li>
                 </ul>
               </div>
               <div class="movie-content">
                 <div class="top">
-                  <h5 class="title"><a href="<?= base_url("movie-details/$movie->id"); ?>"><?= $movie->original_title; ?></a></h5>
-                  <span class="date"><?= date('Y', strtotime($movie->release_date)); ?></span>
+                  <h5 class="title"><a href="<?= base_url("movie-details/$movie->id"); ?>"><?= $movie->original_name; ?></a></h5>
+                  <span class="date"><?= date('Y', strtotime($movie->first_air_date)); ?></span>
                 </div>
                 <div class="bottom">
                   <ul>
@@ -78,7 +78,7 @@
                       <!-- <span class="duration"><i class="far fa-clock"></i> 128 min</span> -->
                       <span class="rating">
                         <?php foreach ($movie->genre_ids as $genre) : ?>
-                          <?= $movie_genre[$genre]; ?>,
+                          <?= $tv_genre[$genre]; ?>,
                         <?php endforeach; ?>
                       </span></span>
                     </li>
@@ -97,11 +97,11 @@
             <nav>
               <ul>
                 <?php for ($i = 1; $i < 5; $i++) : ?>
-                  <li class="<?= uri_string() == "movie/$i" ? 'active' : ''; ?>">
-                    <a href="<?= base_url("/movie/$i"); ?>"><?= $i; ?></a>
+                  <li class="<?= uri_string() == "tv-show/$i" ? 'active' : ''; ?>">
+                    <a href="<?= base_url("/tv-show/$i"); ?>"><?= $i; ?></a>
                   </li>
                 <?php endfor ?>
-                <li><a href="<?= base_url("/movie/$i"); ?>">Last</a></li>
+                <li><a href="<?= base_url("/tv-show/$i"); ?>">Last</a></li>
               </ul>
             </nav>
           </div>

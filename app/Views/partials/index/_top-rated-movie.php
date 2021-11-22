@@ -1,5 +1,6 @@
 <section class="top-rated-movie tr-movie-bg2" data-background="<?= base_url('assets/img/bg/tr_movies_bg.jpg'); ?>">
   <div class="container">
+
     <div class="row justify-content-center">
       <div class="col-lg-8">
         <div class="section-title title-style-three text-center mb-70">
@@ -8,6 +9,7 @@
         </div>
       </div>
     </div>
+    
     <div class="row movie-item-row">
       <?php foreach (array_slice($movie_top_rated->results, 0, 10) as $tr) : ?>
         <div class="custom-col-">
@@ -47,6 +49,8 @@
         </div>
       <?php endforeach ?>
     </div>
+
+
     <div class="tr-movie-btn text-center mt-25">
       <a href="#" class="btn">BROWSE ALL MOVIES</a>
     </div>

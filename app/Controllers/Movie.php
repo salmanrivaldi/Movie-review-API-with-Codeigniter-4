@@ -69,4 +69,50 @@ class Movie extends BaseController
 
     return view('movie-details', $data);
   }
+
+  public function movie($page = null)
+  {
+    $curl = curl('movie', 'upcoming')->results;
+
+    if ($page != null) {
+      $curl = curl('movie', 'upcoming', $page)->results;
+    }
+
+    $getGenre = getMovieGenre('movie')->genres;
+    $movieGenres = [];
+    foreach ($getGenre as $genre) {
+      $movieGenres[$genre->id] = $genre->name;
+    }
+
+    $data = [
+      'title' => 'Movies',
+      'movie_genre' => $movieGenres,
+      'movie_upcoming' => $curl,
+    ];
+
+    return view('movie', $data);
+  }
+
+  public function tv($page = null)
+  {
+    $curl = curl('tv', 'airing_today')->results;
+
+    if ($page != null) {
+      $curl = curl('tv', 'airing_today', $page)->results;
+    }
+
+    $getTvGenre = getTvGenre()->genres;
+    $tvGenres = [];
+    foreach ($getTvGenre as $genre) {
+      $tvGenres[$genre->id] = $genre->name;
+    }
+
+    $data = [
+      'title' => 'Tv Show',
+      'tv_genre' => $tvGenres,
+      'tv_new' => $curl,
+    ];
+
+    return view('tv-show', $data);
+  }
 }

@@ -13,27 +13,9 @@
               </div>
               <div class="navbar-wrap main-menu d-none d-lg-flex">
                 <ul class="navigation">
-                  <li class="menu-item-has-children"><a href="#">Home</a>
-                    <ul class="submenu">
-                      <li><a href="index.html">Home One</a></li>
-                      <li><a href="index-2.html">Home Two</a></li>
-                    </ul>
-                  </li>
-                  <li class="active menu-item-has-children"><a href="#">Movie</a>
-                    <ul class="submenu">
-                      <li><a href="movie.html">Movie</a></li>
-                      <li class="active"><a href="movie-details.html">Movie Details</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="tv-show.html">tv show</a></li>
-                  <li><a href="pricing.html">Pricing</a></li>
-                  <li class="menu-item-has-children"><a href="#">blog</a>
-                    <ul class="submenu">
-                      <li><a href="blog.html">Our Blog</a></li>
-                      <li><a href="blog-details.html">Blog Details</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="contact.html">contacts</a></li>
+                  <li class="menu-item-has-children"><a href="/">Home</a></li>
+                  <li class="active menu-item-has-children"><a href="/movie">Movie</a></li>
+                  <li><a href="/tv-show">tv show</a></li>
                 </ul>
               </div>
               <div class="header-action d-none d-md-block">
@@ -43,14 +25,11 @@
                     <form action="#">
                       <div class="icon"><i class="flaticon-globe"></i></div>
                       <select id="lang-dropdown">
-                        <option value="">En</option>
-                        <option value="">Au</option>
-                        <option value="">AR</option>
-                        <option value="">TU</option>
+                        <option value="">English</option>
+                        <option value="">Indonesia</option>
                       </select>
                     </form>
                   </li>
-                  <li class="header-btn"><a href="#" class="btn">Sign In</a></li>
                 </ul>
               </div>
             </nav>

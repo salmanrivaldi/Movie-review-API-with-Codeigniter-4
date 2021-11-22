@@ -34,6 +34,9 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Movie::index');
 $routes->get('movie', 'Movie::movie');
 $routes->get('movie-details/(:num)', 'Movie::detailMovie/$1');
+$routes->get('movie/(:num)', 'Movie::movie/$1');
+$routes->get('tv-show', 'Movie::tv');
+$routes->get('tv-show/(:num)', 'Movie::tv/$1');
 
 /*
  * --------------------------------------------------------------------

@@ -70,11 +70,11 @@ class Movie extends BaseController
     return view('movie-details', $data);
   }
 
-  public function movie($page = null)
+  public function movie($page = 1)
   {
     $curl = curl('movie', 'upcoming')->results;
 
-    if ($page != null) {
+    if ($page != 1) {
       $curl = curl('movie', 'upcoming', $page)->results;
     }
 
@@ -87,17 +87,17 @@ class Movie extends BaseController
     $data = [
       'title' => 'Movies',
       'movie_genre' => $movieGenres,
-      'movie_upcoming' => $curl,
+      'movies' => $curl,
     ];
 
     return view('movie', $data);
   }
 
-  public function tv($page = null)
+  public function tv($page = 1)
   {
     $curl = curl('tv', 'airing_today')->results;
 
-    if ($page != null) {
+    if ($page != 1) {
       $curl = curl('tv', 'airing_today', $page)->results;
     }
 
@@ -114,5 +114,23 @@ class Movie extends BaseController
     ];
 
     return view('tv-show', $data);
+  }
+
+  public function find()
+  {
+    $keyword = $this->request->getVar('keyword');
+    $getGenre = getMovieGenre('movie')->genres;
+    $movieGenres = [];
+    foreach ($getGenre as $genre) {
+      $movieGenres[$genre->id] = $genre->name;
+    }
+
+    $data = [
+      'title' => 'Find Movies',
+      'movie_genre' => $movieGenres,
+      'movies' => findMovie($keyword)->results,
+    ];
+
+    return view('find-movie', $data);
   }
 }

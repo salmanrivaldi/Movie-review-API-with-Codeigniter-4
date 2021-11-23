@@ -52,7 +52,7 @@
 
 
     <div class="tr-movie-btn text-center mt-25">
-      <a href="#" class="btn">BROWSE ALL MOVIES</a>
+      <a href="/movie" class="btn">BROWSE ALL MOVIES</a>
     </div>
   </div>
 </section>

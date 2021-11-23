@@ -5,34 +5,14 @@
 <!-- main-area -->
 <main>
 
-  <!-- breadcrumb-area -->
-  <section class="breadcrumb-area breadcrumb-bg" data-background="<?= base_url('assets/img/bg/watching.jpg'); ?>">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="breadcrumb-content">
-            <h2 class="title">Our <span>Movie</span></h2>
-            <nav aria-label="breadcrumb">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Movie</li>
-              </ol>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- breadcrumb-area-end -->
-
   <!-- movie-area -->
   <section class="movie-area movie-bg" data-background="<?= base_url('assets/img/bg/movie_bg.jpg'); ?>">
     <div class="container">
       <div class="row align-items-end mb-60">
         <div class="col-lg-6">
           <div class="section-title text-center text-lg-left">
-            <span class="sub-title">MOVIES</span>
-            <h2 class="title">New Release Movies</h2>
+            <span class="sub-title">FIND MOVIES & TV SHOW</span>
+            <h2 class="title">Movies & Tv Show</h2>
           </div>
         </div>
         <div class="col-lg-6">
@@ -89,25 +69,6 @@
           </div>
         <?php endforeach ?>
       </div>
-
-
-      <div class="row">
-        <div class="col-12">
-          <div class="pagination-wrap mt-30">
-            <nav>
-              <ul>
-                <?php for ($i = 1; $i < 5; $i++) : ?>
-                  <li class="<?= uri_string() == "movie/$i" ? 'active' : ''; ?>">
-                    <a href="<?= base_url("/movie/$i"); ?>"><?= $i; ?></a>
-                  </li>
-                <?php endfor ?>
-                <li><a href="<?= base_url("/movie/$i"); ?>">Last</a></li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </div>
-
     </div>
   </section>
   <!-- movie-area-end -->

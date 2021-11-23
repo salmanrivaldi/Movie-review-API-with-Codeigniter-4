@@ -32,12 +32,12 @@
       <div class="row">
         <div class="col-lg-6 col-md-6">
           <div class="copyright-text">
-            <p>Copyright &copy; 2021. All Rights Reserved By <a href="index.html">Movflx</a></p>
+            <p>Copyright &copy; <?= date('Y'); ?>. All Rights Reserved By <a href="/">Movflx</a></p>
           </div>
         </div>
         <div class="col-lg-6 col-md-6">
           <div class="payment-method-img text-center text-md-right">
-            <img src="img/images/card_img.png" alt="img">
+            <img src="<?= base_url('assets/img/images/card_img.png'); ?>" alt="img">
           </div>
         </div>
       </div>

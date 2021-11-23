@@ -168,3 +168,18 @@ function getSimilarMovie($id)
 
   return json_decode($response);
 }
+
+function findMovie($keyword)
+{
+  $api_key = 'bd3b77b0db915a809f11ad2bd7469481';
+
+  $ch = curl_init();
+  curl_setopt($ch, CURLOPT_URL, "https://api.themoviedb.org/3/search/movie?api_key=$api_key&query=$keyword&language=id-ID");
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+  curl_setopt($ch, CURLOPT_HEADER, FALSE);
+  curl_setopt($ch, CURLOPT_HTTPHEADER, array("Accept: application/json"));
+  $response = curl_exec($ch);
+  curl_close($ch);
+
+  return json_decode($response);
+}

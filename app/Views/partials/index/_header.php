@@ -22,8 +22,8 @@
                 <ul>
                   <li class="d-none d-xl-block">
                     <div class="footer-search">
-                      <form action="#">
-                        <input type="text" placeholder="Find Favorite Movie">
+                      <form action="/movie/find">
+                        <input type="text" name="keyword" placeholder="Find Favorite Movie">
                         <button><i class="fas fa-search"></i></button>
                       </form>
                     </div>

@@ -54,8 +54,8 @@
           <div class="modal fade" id="search-modal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
-                <form>
-                  <input type="text" placeholder="Search here...">
+                <form action="/movie/find">
+                  <input type="text" name="keyword" placeholder="Search here...">
                   <button><i class="fas fa-search"></i></button>
                 </form>
               </div>
